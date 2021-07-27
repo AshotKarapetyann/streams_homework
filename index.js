@@ -1,7 +1,6 @@
 const process = require('process');
 const fs = require('fs');
 const zlib = require("zlib");
-const path = require("path");
 const argv = process.argv.slice(2);
 const zip = zlib.createGzip();
 
