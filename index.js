@@ -16,7 +16,7 @@ fs.mkdir('newFolder', (err) => {
         } 
         files.forEach(function (file) {
             const input = fs.createReadStream(file);
-            const output = fs.createWriteStream("./newFolder/files.gzip");
+            const output = fs.createWriteStream("./newFolder/files.zip");
 
             input.pipe(zip).pipe(output)
         });
