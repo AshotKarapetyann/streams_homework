@@ -5,7 +5,7 @@ const path = require("path")
 const argv = process.argv.slice(2)
 const zip = zlib.createGzip()
 
-fs.mkdir(path.join(__dirname, 'newFolder'), (err) => {
+fs.mkdir('newFolder', (err) => {
     if (err) {
         return console.error(err);
     }
