@@ -1,9 +1,9 @@
 const process = require('process');
-const fs = require('fs')
-const zlib = require("zlib")
-const path = require("path")
-const argv = process.argv.slice(2)
-const zip = zlib.createGzip()
+const fs = require('fs');
+const zlib = require("zlib");
+const path = require("path");
+const argv = process.argv.slice(2);
+const zip = zlib.createGzip();
 
 fs.mkdir('newFolder', (err) => {
     if (err) {
@@ -18,7 +18,7 @@ fs.mkdir('newFolder', (err) => {
             const input = fs.createReadStream(file);
             const output = fs.createWriteStream("./newFolder/files.zip");
 
-            input.pipe(zip).pipe(output)
+            input.pipe(zip).pipe(output);
         });
     });
 
